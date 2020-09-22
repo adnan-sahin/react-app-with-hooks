@@ -65,8 +65,6 @@ function useSpeakerDataManager() {
     };
   }, []); // [speakingSunday, speakingSaturday]);
 
-  debugger;
-
   return {
     isLoading,
     speakerList,

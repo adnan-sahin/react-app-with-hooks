@@ -10,7 +10,7 @@ export default function speakersReducer(state, action) {
 
   switch (action.type) {
     case 'setSpeakerList':
-      debugger;
+    
       return {
         ...state,
         speakerList: action.data,
