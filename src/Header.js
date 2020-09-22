@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import SignMeUp from './SignMeUp';
+import { GlobalContext } from './GloabalState';
 
 export const Header = () => {
   const signupCallback = (email) => {
     return console.log(`sign up called with email ${email}`);
   };
+
+  const { favoriteClickCount } = useContext(GlobalContext);
 
   return (
     <div className="jumbotron jumbotronheight">
@@ -18,6 +21,7 @@ export const Header = () => {
             <img src="/static/SVCClogo.png" />
           </div>
           <h2>Silicon Valley Code Camp 2019</h2>
+          <h3> Click Count: {favoriteClickCount} </h3>
           <div className="row col-12 text-lg-right">
             <SignMeUp signupCallback={signupCallback} />
           </div>
